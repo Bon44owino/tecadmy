@@ -55,17 +55,27 @@ include_once('./db_connect.php');
         // Login procedure
         if(isset($_POST['loginBtn']))
         {
-            $email = $_POST['username'];
+            $email = $_POST['email'];
             $password = $_POST['password'];
         
             $login_query = "SELECT * FROM users WHERE status = 1 AND email = '$email' AND password ='$password'";
         
-            $login_query_run = mysqli_query($conn, $login_query);
+            $login_query_run = mysqli_query($db_connection, $login_query);
         
             if (mysqli_fetch_array($login_query_run)) 
             {
-                $_SESSION['username'] = $username_login;
-                header("Location: ../index.html");
+                $_SESSION['username'] = $email;
+                $_SESSION['success'] = '<span style="
+                                                padding: 15px;
+                                                margin-bottom: 20px;
+                                                border: 1px solid transparent;
+                                                border-radius: 4px;
+                                                background-color: #dff0d8;
+                                                border-color: #d6e9c6;
+                                                color: #3c763d;">
+                                    Welcome '. $email . '
+                                    </span>';
+                header("Location: ../index.php");
             }
             else
             {

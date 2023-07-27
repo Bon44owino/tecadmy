@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,12 +35,22 @@
       <!--Forms-->
 
 
+      <!-- Sessions -->
+        <?php
+            // Successful member registration
+                if (isset($_SESSION['success']) && $_SESSION['success'] != '') {
+                echo $_SESSION['success'];
+                unset($_SESSION['success']);
+                }
+        ?>
+
+
     <!---Navigation bar-->
 
     <!---Home Section-->
     <section id="home">
         <h2>Access Quality Education from the Comfort of Your Home</h2>
-        <p> Learning doesn’t just happen during business hours in the office or in the classroom. It happens everywhere through a number of different channels.Unlock the Power of Knowledge, Ignite Your Mind, and Soar to New Heights with our Cutting-Edge Online Learning Platform, Where Learning Knows No Boundaries.The future of 
+        <p> Learning doesn't just happen during business hours in the office or in the classroom. It happens everywhere through a number of different channels.Unlock the Power of Knowledge, Ignite Your Mind, and Soar to New Heights with our Cutting-Edge Online Learning Platform, Where Learning Knows No Boundaries.The future of 
             Education is online and the future is now!
         </p>
         <div class="btn">
