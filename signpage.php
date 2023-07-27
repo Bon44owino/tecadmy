@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,47 +36,61 @@
     <div class="forms">
         <div class="form-content">
           <div class="login-form">
+                <?php
+                    if(isset($_SESSION['status']) && $_SESSION['status'] !="")
+                    {
+                        echo $_SESSION['status'];
+                        unset($_SESSION['status']);
+                    }
+                  ?>
             <div class="title">Login</div>
-          <form action="#" method="#" >
+          <form action="./database/code.php" method="post" >
             <div class="input-boxes">
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
-                <input type="text" placeholder="Enter your email" required>
+                <input type="email" name="email" placeholder="Enter your email" required>
               </div>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Enter your password" required>
+                <input type="password" name="password" placeholder="Enter your password" required>
               </div>
               <div class="text"><a href="#">Forgot password?</a></div>
               <div class="button input-box">
-                <input type="submit" value="Submit">
+                <input type="submit" value="Submit" name="loginBtn">
               </div>
               <div class="text sign-up-text">Don't have an account? <label for="flip">Signup now</label></div>
             </div>
         </form>
       </div>
         <div class="signup-form">
+                <?php
+                    if(isset($_SESSION['status']) && $_SESSION['status'] !="")
+                    {
+                        echo $_SESSION['status'];
+                        unset($_SESSION['status']);
+                    }
+                  ?>
           <div class="title">Signup</div>
-        <form action="#" method="#">
+        <form action="./database/code.php" method="post">
             <div class="input-boxes">
               <div class="input-box">
                 <i class="fas fa-user"></i>
-                <input type="text" placeholder="Username" required>
+                <input type="text" placeholder="Username" name="username" required>
               </div>
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
-                <input type="text" placeholder="Enter your email" required>
+                <input type="email" name="email" placeholder="Enter your email" required>
               </div>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Enter your password" required>
+                <input type="password" name="password" placeholder="Enter your password" required>
               </div>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Confirm password" required>
+                <input type="password" name="confirm_password" placeholder="Confirm password" required>
               </div>
               <div class="button input-box">
-                <input type="submit" value="Submit">
+                <input type="submit" value="Submit" name="registerBtn">
               </div>
               <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
             </div>

@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -65,15 +66,28 @@
             </div>
         </div>
         <form  class="form" action="./database/code.php" method="post">
+                    <?php
+                        // Successful member registration
+                        if (isset($_SESSION['success']) && $_SESSION['success'] != '') {
+                            echo $_SESSION['success'];
+                            unset($_SESSION['success']);
+                        }
+
+                        // Incase of failure to input member
+                        if (isset($_SESSION['status']) && $_SESSION['status'] != '') {
+                            echo $_SESSION['status'];
+                            unset($_SESSION['status']);
+                        }
+                    ?>
             <!-- <div class="form ">  -->
                 <h4>Let's Connect</h4>
                 <p>Please fill in your details and reach to us</p>
                 <div class="form-row">
-                    <input type="text" name="name" placeholder="Your Name">
-                    <input type="text" name="email" placeholder="Email">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
                 </div>
                 <div class="form-col">
-                    <input type="text" name="subject" placeholder="Subject">
+                    <input type="text" name="subject" placeholder="Subject" required>
                 </div>
                 <div class="form-col">
                     <textarea name="body" id="" cols="30" rows="8" placeholder="Send us a Message"></textarea>
