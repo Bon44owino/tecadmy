@@ -298,13 +298,24 @@ footer .subscribe a{
     font-weight: 600;
     
 }
-footer .subscribe a.yellow{
+footer .subscribe button.yellow{
     color: #fff;
     background: red;
     transition: 0.3s ease;
+    display: inline-block;
+	font-weight: 400;
+	color: #212529;
+	text-align: center;
+	border: 1px solid transparent;
+	padding: .375rem .75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	border-radius: .25rem;
+	/* color: #fff; */
+	/* background-color: #007bff; */
 
 }
-footer .subscribe a.yellow:hover{
+footer .subscribe button.yellow:hover{
     color:red;
     background: #fff;
 }

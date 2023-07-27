@@ -14,19 +14,7 @@
 </head>
 <body>
     <!---Navigation bar-->
-    <nav>
-    <img src="Assets/images/tecdmy 1.PNG" alt="">
-    <div class="navigation">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a class="active"  href="about.html">About</a></li>
-            <li><a href="course.html">Courses</a></li>
-            <li><a href="ment.html">Mentorship</a></li>
-            <li><a href="#">Contact</a></li>
-            <button onclick="window.location.href='signpage.html'" class="btnlogin-popup">Login</button>
-        </ul>
-    </div>
-</nav>
+    <?php include('./includes/nav.php')  ?>
 
     <!---Navigation bar-->
 

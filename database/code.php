@@ -152,4 +152,48 @@ include_once('./db_connect.php');
         }
 
 
+        // Subscribe page insert
+        if(isset($_POST['subscribe']))
+        {
+            $email = $_POST['email'];
+            $client_ip = gethostbyname(trim(`hostname`));
+
+            $subscriberQuery = "INSERT INTO subscribers (email, client_ip, created_at) 
+                                       VALUES ('$email', '$client_ip', now());";
+
+            $executeSubscriberQuery = mysqli_query($db_connection, $subscriberQuery);
+
+            if($executeSubscriberQuery)
+            {
+                $_SESSION['success'] = '<span style="
+                                                    padding: 15px;
+                                                    margin-bottom: 20px;
+                                                    border: 1px solid transparent;
+                                                    border-radius: 4px;
+                                                    background-color: #dff0d8;
+                                                    border-color: #d6e9c6;
+                                                    color: #3c763d;">
+                                            Subscriber Successfully Saved 
+                                        </span>';
+                header("Location: ../index.php");
+            }
+            else 
+            {
+                $_SESSION['status'] = '<span style="
+                                                    padding: 15px;
+                                                    margin-bottom: 20px;
+                                                    border: 1px solid transparent;
+                                                    border-radius: 4px;
+                                                    background-color: #f2dede;
+                                                    border-color: #ebccd1;
+                                                    color: #a94442;">
+                                            Sorry an Error occurred. Try again
+                                        </span>';
+                header("Location: ../index.php");  
+            }
+
+
+        }
+
+
 ?>

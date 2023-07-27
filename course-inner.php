@@ -14,19 +14,7 @@
 </head>
 <body>
     <!---Navigation bar-->
-    <nav>
-    <img src="Assets/images/tecdmy 1.PNG" alt="">
-    <div class="navigation">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a class="active" href="course.html">Courses</a></li>
-            <li><a href="#">Mentorship</a></li>
-            <li><a href="#">Contact</a></li>
-            <button class="btnlogin-popup">Login</button>
-        </ul>
-    </div>
-</nav>
+    <?php include('./includes/nav.php')  ?>
 
     <!---Navigation bar-->
 
@@ -41,7 +29,7 @@
         <img class="course-img" src="Assets/images/hechto.jpg" alt="">
         <div class="course-head">
             <div class="c-name">
-                <h2>Styling With CSS</h2>
+                <h2>Introduction to HTML</h2>
                 <div class="star">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -49,7 +37,7 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                 </div>
-                <p>CSS course from beginner level-all the way up to advanced level.</p>
+                <p>HTML course from beginning-all the way up to HTML advanced level.</p>
             </div>
         </div>
         <h3>Instructor</h3>
@@ -62,14 +50,15 @@
         </div>
         <hr>
         <h3>Course Overview</h3>
-        <p>
-            Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML (including XML dialects such as SVG, MathML or XHTML).CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
+        <p>The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser.<br> It defines the meaning and structure of web content. It is often assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.<br>
+
+            <br>Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for its appearance.
         </p>
             <hr>
             <h3>What You'll Learn</h3>
             <div class="learn">
-                <p> <i class="fas  fa-check-circle"></i></i> CSS course from scratch-Beginner to advanced</p>
-                <p> <i class="fas  fa-check-circle"></i></i>All about Selectors,Properties,Box-model,values e.t.c.</p>
+                <p> <i class="fas  fa-check-circle"></i></i> HTML course from scratch-Beginner to advanced</p>
+                <p> <i class="fas  fa-check-circle"></i></i>All about element and Tags,Links and Navigations,Lists,Tables e.t.c.</p>
                 <p> <i class="fas  fa-check-circle"></i></i>Project-driven learning with plenty of examples</p>
                 <p> <i class="fas  fa-check-circle"></i></i>All core features and concepts you need to know in modern Web development</p>
             </div>
@@ -86,53 +75,8 @@
     </div>
  </section>
 
-
  <!--Footer-->
- <footer>
-    <div class="footer-col">
-     <h3>Features</h3>
-     <li>About</li>
-     <li>Courses</li>
-     <li>Mentorship</li>
-     <li>Contact</li>
-    </div>
-    <div class="footer-col">
-     <h3>Get Help</h3>
-     <li>Contact us</li>
-     <li>FAQS</li>
-     <li>Terms & Services</li>
-     <li>Privacy Policy</li>
-    </div>
-    <div class="footer-col">
-     <h3>Top products</h3>
-     <li>Manage reputation</li>
-     <li>Power tools</li>
-     <li>Managed websites</li>
-     <li>Marketing Services</li>
-    </div>
-    <div class="footer-col">
-     <h3>Follow us</h3>
-     <li>Instagram</li>
-     <li>Twitter</li>
-     <li>Facebook</li>
-     <li>Linkedn</li>
-    </div>
-    <div class="footer-col">
-     <h3>Newsletter</h3>
-     <p>You can trust us.We only send promo offers</p>
-     <div class="subscribe">
-         <input type="text" placeholder="Your Email address">
-         <a href="#" class="yellow">SUBSCRIBE</a>
-     </div>
-    </div>
-    <div class="copyright">
-     <p>Copyright@2023 all rights reserved|Tecadmy.com</p>
-     <div class="pro-links">
-         <i class="fab fa-instagram"></i>
-          <i class="fab fa-twitter"></i>
-         <i class="fab fa-linkedin-in"></i>
-     </div>
-    </div>
- </footer>
+ <?php include('./includes/footer.php'); ?>
+ 
 </body>
 </html>

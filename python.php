@@ -14,19 +14,7 @@
 </head>
 <body>
     <!---Navigation bar-->
-    <nav>
-    <img src="Assets/images/tecdmy 1.PNG" alt="">
-    <div class="navigation">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a class="active" href="course.html">Courses</a></li>
-            <li><a href="#">Mentorship</a></li>
-            <li><a href="#">Contact</a></li>
-            <button class="btnlogin-popup">Login</button>
-        </ul>
-    </div>
-</nav>
+    <?php include('./includes/nav.php')  ?>
 
     <!---Navigation bar-->
 
@@ -88,51 +76,7 @@ From automating simple tasks and routines to making complex projects and program
  </section>
 
  <!--Footer-->
- <footer>
-    <div class="footer-col">
-     <h3>Features</h3>
-     <li>About</li>
-     <li>Courses</li>
-     <li>Mentorship</li>
-     <li>Contact</li>
-    </div>
-    <div class="footer-col">
-     <h3>Get Help</h3>
-     <li>Contact us</li>
-     <li>FAQS</li>
-     <li>Terms & Services</li>
-     <li>Privacy Policy</li>
-    </div>
-    <div class="footer-col">
-     <h3>Top products</h3>
-     <li>Manage reputation</li>
-     <li>Power tools</li>
-     <li>Managed websites</li>
-     <li>Marketing Services</li>
-    </div>
-    <div class="footer-col">
-     <h3>Follow us</h3>
-     <li>Instagram</li>
-     <li>Twitter</li>
-     <li>Facebook</li>
-     <li>Linkedn</li>
-    </div>
-    <div class="footer-col">
-     <h3>Newsletter</h3>
-     <p>You can trust us.We only send promo offers</p>
-     <div class="subscribe">
-         <input type="text" placeholder="Your Email address">
-         <a href="#" class="yellow">SUBSCRIBE</a>
-     </div>
-    </div>
-    <div class="copyright">
-     <p>Copyright@2023 all rights reserved|Tecadmy.com</p>
-     <div class="pro-links">
-         <i class="fab fa-instagram"></i>
-          <i class="fab fa-twitter"></i>
-         <i class="fab fa-linkedin-in"></i>
-     </div>
-    </div>
- </footer>
+ <?php include('./includes/footer.php'); ?>
+ 
 </body>
 </html>

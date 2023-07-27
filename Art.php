@@ -14,19 +14,8 @@
 </head>
 <body>
     <!---Navigation bar-->
-    <nav>
-    <img src="Assets/images/tecdmy 1.PNG" alt="">
-    <div class="navigation">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a class="active" href="course.html">Courses</a></li>
-            <li><a href="#">Mentorship</a></li>
-            <li><a href="#">Contact</a></li>
-            <button class="btnlogin-popup">Login</button>
-        </ul>
-    </div>
-</nav>
+ 
+    <?php include('./includes/nav.php')  ?>
 
     <!---Navigation bar-->
 
@@ -41,7 +30,7 @@
         <img class="course-img" src="Assets/images/hechto.jpg" alt="">
         <div class="course-head">
             <div class="c-name">
-                <h2>Introduction to Data Science</h2>
+                <h2>Fundamentals of Artificial Intelligence</h2>
                 <div class="star">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -49,29 +38,29 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                 </div>
-                <p>Introduction Data Science from Beginner level</p>
+                <p>Artificial from Intermediate level</p>
             </div>
         </div>
         <h3>Instructor</h3>
         <div class="tutor">
-            <img src="Assets/images/Melanie.jpg" alt="">
+            <img src="Assets/images/brad.jpg" alt="">
             <div class="tutor-det">
-                <h5>Melanie Pendo</h5>
+                <h5>Bradley Ogutu</h5>
                 <p>Data Science Engineer at Tecadmy</p>
             </div>
         </div>
         <hr>
         <h3>Course Overview</h3>
         <p>
-            This course will teach you the basics of data science. You will look into data science processes, receive an introduction to machine learning, and learn about data models for structuring data. You will also be shown how to gain knowledge and insights from data that is both structured and unstructured as well as learn to use scientific methods, processes, algorithms, and data science systems.
+            Artificial Intelligence (AI) is taking the world by storm. This course covers all the basics of AI and explores machine learning, natural language processing and computer vision. We outline the intriguing history of AI and consider its ethical implications before laying out its current and future applications. This computer science course provides a solid understanding of the basics of AI and shows you how it can be applied to boost productivity.
         </p>
             <hr>
             <h3>What You'll Learn</h3>
             <div class="learn">
-                <p> <i class="fas  fa-check-circle"></i></i> Flutter course Beginner level to advanced</p>
-                <p> <i class="fas  fa-check-circle"></i></i>All about Algorithms,statisctics,processes,machine learning e.t.c.</p>
+                <p> <i class="fas  fa-check-circle"></i></i> AI course Beginner level to advanced</p>
+                <p> <i class="fas  fa-check-circle"></i></i>All about machine learning,Deep learning,Machine visions,Natural language processing(NLP) e.t.c.</p>
                 <p> <i class="fas  fa-check-circle"></i></i>Project-driven learning with plenty of examples</p>
-                <p> <i class="fas  fa-check-circle"></i></i>All core features and concepts you need to know in Data Science</p>
+                <p> <i class="fas  fa-check-circle"></i></i>All core features and concepts you need to know in Artificial Intelligence</p>
             </div>
     </div>
     <div class="enroll">
@@ -81,10 +70,11 @@
                 <p> <i class="fas  fa-infinity"></i></i>Full LIfetime access</p>
                 <p> <i class="fas  fa-download"></i></i>Downloadable Resources</p>
                 <div class="enroll-btn">
-                    <a class="blue" href="https://youtu.be/ua-CiDNNj30">Start Learning</a>
+                    <a class="blue" href="https://youtu.be/gD_HWj_hvbo">Start Learning</a>
                 </div>
     </div>
  </section>
+
  <!--Footer-->
  <footer>
     <div class="footer-col">
